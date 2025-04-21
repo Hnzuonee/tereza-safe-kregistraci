@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tereza Osladilová — Oficiální linky</title>
+  <title>Tereza Osladilová — Oficiální Odkazy</title>
 
-  <!-- Open Graph (volitelné, ale pomůže při sdílení) -->
-  <meta property="og:title"       content="Tereza Osladilová — Oficiální linky">
-  <meta property="og:description" content="Vše na jednom místě.">
-  <meta property="og:image"       content="https://terezalink.com/img/foto.jpg">
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://terezalink.com">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Fonts & CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1">
+  <style>
+    :root{
+      --accent:#ff6b57;      /* zrzavě‑korálová */
+      --accent-dark:#e45a48; /* hover */
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Manrope',sans-serif;
+      background:#000;                   /* ✨ černé pozadí */
+      color:#fff;
+      min-height:100vh;
+      display:flex;justify-content:center;align-items:center;
+      padding:32px;
+    }
+    .card{
+      width:100%;max-width:360px;
+      background:rgba(255,255,255,.07);
+      border-radius:24px;
+      padding:32px 28px;
+      text-align:center;
+      backdrop-filter:blur(14px) saturate(120%);
+      box-shadow:0 6px 18px rgba(0,0,0,.4);
+    }
+    .pfp{
+      width:128px;height:128px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid var(--accent);
+      box-shadow:0 4px 14px rgba(0,0,0,.6);
+    }
+    h1{font-size:1.65rem;font-weight:600;margin:22px 0 6px}
+    p.tag{font-size:.95rem;color:#ccc;margin-bottom:24px}
+
+    .btn{
+      display:block;width:100%;
+      padding:14px 18px;margin:10px 0;
+      font-size:1.05rem;font-weight:600;
+      border:none;border-radius:18px;
+      color:#fff;text-decoration:none;
+      transition:.2s;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn:active{transform:none}
+
+    .vip     {background:var(--accent)}
+    .vip:hover{background:var(--accent-dark)}
+    .youtube {background:#ff0000}
+    .x       {background:#1d9bf0}
+  </style>
 </head>
 <body>
-  <main class="card">
-<img src="foto.jpg" alt="Tereza Osladilová" class="pfp">
+  <div class="card">
+    <!-- profilovka v kořeni repa -->
+    <img src="foto.jpg" alt="Tereza Osladilová" class="pfp">
 
-    <h1 class="name">Tereza Osladilová</h1>
-    <p class="tagline">🍂 Redhead vibes 🍂</p>
+    <h1>Tereza Osladilová</h1>
+    <p class="tag">Oficiální odkazy &nbsp;✨</p>
 
-    <!-- VIP -->
+    <!-- VIP button (povede na druhý step) -->
     <a class="btn vip" href="https://terkystranka.com" target="_blank" rel="noopener noreferrer">
       💎 VIP zóna
     </a>
@@ -33,10 +77,10 @@
       ▶️ YouTube
     </a>
 
-    <!-- Twitter / X -->
-    <a class="btn twitter" href="https://x.com/terka_osladil" target="_blank" rel="noopener noreferrer">
+    <!-- X / Twitter -->
+    <a class="btn x" href="https://x.com/terka_osladil" target="_blank" rel="noopener noreferrer">
       🐦 X (Twitter)
     </a>
-  </main>
+  </div>
 </body>
 </html>
