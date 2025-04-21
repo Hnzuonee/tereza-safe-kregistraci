@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Přístup k exkluzivnímu obsahu</title>
+  <style>
+    body{
+      font-family:Arial, sans-serif;text-align:center;padding-top:40px;
+      background:linear-gradient(to bottom,#ffdde1,#ee9ca7);color:#333;
+    }
+    .box{
+      background:rgba(255,255,255,.96);max-width:400px;margin:auto;padding:22px;
+      border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.25);
+    }
+    img{width:100%;border-radius:12px;margin-bottom:16px;}
+    button{
+      background:#ff69b4;color:#fff;border:0;padding:14px 28px;font-size:18px;
+      border-radius:9px;cursor:pointer;transition:.2s;
+    }
+    button:hover{background:#e55ea1}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="foto.jpg" alt="Tereza Osladilová">
+    <h2>VIP zóna</h2>
+    <p>Klikni na tlačítko a pokračuj dále.</p>
+
+    <button id="go">Pokračovat</button>
+  </div>
+
+  <script>
+    document.getElementById('go').onclick = async () => {
+      try{
+        const r = await fetch('/.netlify/functions/redirect',{method:'POST'});
+        const d = await r.json();
+        location.href = d.url;
+      }catch(e){
+        alert('Zkus to prosím znovu za chvíli.');
+      }
+    };
+  </script>
+</body>
+</html>
