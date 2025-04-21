@@ -1,0 +1,42 @@
+/* === Reset & globals === */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  display:flex;justify-content:center;align-items:center;min-height:100vh;
+  font-family:'Inter',sans-serif;background:#2b0d08;           /* tmavý ginger podklad */
+  background:linear-gradient(135deg,#2b0d08 0%,#4a1e11 60%,#2b0d08 100%);
+  color:#eee;
+}
+
+/* === Card === */
+.card{
+  width:100%;max-width:360px;padding:42px 28px;text-align:center;
+  background:rgba(255,255,255,0.08);border:1px solid #ff9b6a40;
+  border-radius:26px;backdrop-filter:blur(14px) saturate(130%);
+  box-shadow:0 8px 24px rgba(0,0,0,.45);
+}
+
+/* === Profile === */
+.pfp{
+  width:140px;height:140px;border-radius:50%;object-fit:cover;
+  border:4px solid #ff9b6a;box-shadow:0 6px 18px rgba(0,0,0,.5);
+}
+
+/* === Text === */
+.name{
+  margin:24px 0 6px;font:700 30px 'Playfair Display',serif;letter-spacing:.2px;
+}
+.tagline{font-size:15px;color:#ffbe9f;margin-bottom:30px;}
+
+/* === Buttons === */
+.btn{
+  display:block;width:100%;padding:15px 18px;margin:10px 0;
+  font-size:18px;font-weight:600;color:#fff;text-decoration:none;border:none;
+  border-radius:18px;transition:transform .15s,box-shadow .15s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.35);}
+.btn:active{transform:none;box-shadow:0 3px 8px rgba(0,0,0,.28);}
+
+/* platform colours */
+.vip     {background:linear-gradient(90deg,#ff9b6a 0%,#ff7940 100%);}
+.youtube {background:#ff0000;}
+.twitter {background:#1d9bf0;}
