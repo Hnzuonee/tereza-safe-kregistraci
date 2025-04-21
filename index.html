@@ -3,43 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Přístup k exkluzivnímu obsahu</title>
-  <style>
-    body{
-      font-family:Arial, sans-serif;text-align:center;padding-top:40px;
-      background:linear-gradient(to bottom,#ffdde1,#ee9ca7);color:#333;
-    }
-    .box{
-      background:rgba(255,255,255,.96);max-width:400px;margin:auto;padding:22px;
-      border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.25);
-    }
-    img{width:100%;border-radius:12px;margin-bottom:16px;}
-    button{
-      background:#ff69b4;color:#fff;border:0;padding:14px 28px;font-size:18px;
-      border-radius:9px;cursor:pointer;transition:.2s;
-    }
-    button:hover{background:#e55ea1}
-  </style>
+  <title>Tereza Osladilová — Oficiální odkazy</title>
+
+  <!-- Open Graph pro sdílení -->
+  <meta property="og:title"       content="Tereza Osladilová — Oficiální odkazy">
+  <meta property="og:description" content="Všechny moje ověřené sítě na jednom místě ✨">
+  <meta property="og:image"       content="https://terkaosladilka.com/foto.jpg">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://terkaosladilka.com">
+
+  <!-- Font & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
-  <div class="box">
-    <img src="foto.jpg" alt="Tereza Osladilová">
-    <h2>VIP zóna</h2>
-    <p>Klikni na tlačítko a pokračuj dále.</p>
+  <main class="card">
+    <img class="pfp" src="foto.jpg" alt="Tereza Osladilová">
 
-    <button id="go">Pokračovat</button>
-  </div>
+    <h1 class="name">Tereza Osladilová</h1>
+    <p class="tag">🧡 Official links 🧡</p>
 
-  <script>
-    document.getElementById('go').onclick = async () => {
-      try{
-        const r = await fetch('/.netlify/functions/redirect',{method:'POST'});
-        const d = await r.json();
-        location.href = d.url;
-      }catch(e){
-        alert('Zkus to prosím znovu za chvíli.');
-      }
-    };
-  </script>
+    <!-- VIP zóna -->
+    <a class="btn vip" href="https://terkystranka.com">💎 VIP zóna</a>
+
+    <!-- YouTube -->
+    <a class="btn yt" href="https://www.youtube.com/@TerezaOsladilov" target="_blank" rel="noopener">▶️ YouTube</a>
+
+    <!-- Twitter / X -->
+    <a class="btn tw" href="https://x.com/terka_osladil" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+  </main>
 </body>
 </html>
